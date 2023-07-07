@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DependencyInjectionComponent } from './course-contents/dependency-injection/dependency-injection.component';
+import { ComponentOneComponent } from './course-contents/dependency-injection/components/component-one/component-one.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DependencyInjectionComponent,
+    ComponentOneComponent
   ],
   imports: [
     BrowserModule,
