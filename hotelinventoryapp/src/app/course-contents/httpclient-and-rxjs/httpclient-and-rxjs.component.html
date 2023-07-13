@@ -1,7 +1,11 @@
+<button (click)="addRoom()">Add new room</button>
+
 <div *ngFor="let room of roomList">
   <h2>{{ room.roomType }}</h2>
   <p><strong>Adicionais:</strong> {{ room.amenities }}</p>
   <p><strong>Preço:</strong> {{ room.price }}</p>
   <img [src]="room.photos" alt="" style="width: 200px;">
   <p><strong>Estrelas:</strong> {{ room.rating }}</p>
+  <button (click)="editRoom(room.roomNumber!)">Edit room</button>
+  <button (click)="deleteRoom(room.roomNumber!)">Delete room</button>
 </div>

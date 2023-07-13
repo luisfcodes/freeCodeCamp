@@ -1,10 +1,10 @@
-export interface Room {
-  totalRooms: number;
-  availableRooms: number;
-  bookedRooms: number;
-}
+// export interface Room {
+//   totalRooms: number;
+//   availableRooms: number;
+//   bookedRooms: number;
+// }
 
-export interface RoomList {
+export interface Room {
   roomNumber?: string;
   roomType: string;
   amenities: string;
