@@ -1,0 +1,12 @@
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  h1 {
+    font-size: 2rem;
+    font-style: italic;
+    color: #134e4a;
+  }
+}

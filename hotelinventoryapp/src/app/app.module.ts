@@ -8,6 +8,9 @@ import { ComponentOneComponent } from './course-contents/dependency-injection/co
 import { HttpclientAndRxjsComponent } from './course-contents/httpclient-and-rxjs/httpclient-and-rxjs.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { RoutingBasicsComponent } from './course-contents/routing-basics/routing-basics.component';
+import { NotFoundComponent } from './course-contents/routing-basics/not-found/not-found.component';
+import { RoomsComponent } from './course-contents/routing-basics/rooms/rooms.component';
 
 
 @NgModule({
@@ -15,7 +18,10 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     DependencyInjectionComponent,
     ComponentOneComponent,
-    HttpclientAndRxjsComponent
+    HttpclientAndRxjsComponent,
+    RoutingBasicsComponent,
+    NotFoundComponent,
+    RoomsComponent
   ],
   imports: [
     BrowserModule,

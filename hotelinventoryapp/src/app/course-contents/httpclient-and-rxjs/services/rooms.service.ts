@@ -13,6 +13,10 @@ export class RoomsService {
     return this.httpClient.get<Room[]>('/api/rooms');
   }
 
+  getRoomById(id: string) {
+    return this.httpClient.get<Room>(`/api/rooms/${id}`);
+  }
+
   addRoom(room: Room) {
     return this.httpClient.post<Room[]>('/api/rooms', room);
   }
