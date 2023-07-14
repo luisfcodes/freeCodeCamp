@@ -2,5 +2,13 @@
 
 <!-- <app-httpclient-and-rxjs></app-httpclient-and-rxjs> -->
 
-<a [routerLink]="['/routing-basics']">Routing Basics</a>
-<router-outlet></router-outlet>
+<header class="header">
+  <nav>
+    <a [routerLink]="['/routing-basics']">Routing Basics</a>
+    <a [routerLink]="['/template-driven-forms']">Template Driven Forms</a>
+  </nav>
+</header>
+
+<main class="content">
+  <router-outlet></router-outlet>
+</main>

@@ -11,6 +11,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { RoutingBasicsComponent } from './course-contents/routing-basics/routing-basics.component';
 import { NotFoundComponent } from './course-contents/routing-basics/not-found/not-found.component';
 import { RoomsComponent } from './course-contents/routing-basics/rooms/rooms.component';
+import { TemplateDrivenFormsComponent } from './course-contents/template-driven-forms/template-driven-forms.component';
+import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './course-contents/template-driven-forms/login/login.component';
+import { HoverDirective } from './course-contents/template-driven-forms/directives/hover.directive';
+import { EmailValidatorDirective } from './course-contents/template-driven-forms/directives/email-validator.directive';
 
 
 @NgModule({
@@ -21,12 +26,17 @@ import { RoomsComponent } from './course-contents/routing-basics/rooms/rooms.com
     HttpclientAndRxjsComponent,
     RoutingBasicsComponent,
     NotFoundComponent,
-    RoomsComponent
+    RoomsComponent,
+    TemplateDrivenFormsComponent,
+    LoginComponent,
+    HoverDirective,
+    EmailValidatorDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

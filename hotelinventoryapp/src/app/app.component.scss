@@ -1,0 +1,28 @@
+.header {
+  height: 40px;
+  background-color: #0f172a;
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    height: 100%;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.875rem;
+
+    &:hover {
+      border-bottom: 1px solid #fff;
+    }
+  }
+}
+
+.content {
+  padding: 2rem;
+}

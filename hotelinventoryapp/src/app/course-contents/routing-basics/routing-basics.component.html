@@ -4,5 +4,5 @@
   <p><strong>Preço:</strong> {{ room.price }}</p>
   <img [src]="room.photos" alt="" style="width: 200px;">
   <p><strong>Estrelas:</strong> {{ room.rating }}</p>
-  <button [routerLink]="['/routing-basics/rooms', room.roomNumber]">Select</button>
+  <button class="btn btn-primary" [routerLink]="['/routing-basics/rooms', room.roomNumber]">Select</button>
 </div>
