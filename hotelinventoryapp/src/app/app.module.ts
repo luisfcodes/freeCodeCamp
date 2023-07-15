@@ -17,7 +17,6 @@ import { LoginComponent } from './course-contents/template-driven-forms/login/lo
 import { HoverDirective } from './course-contents/template-driven-forms/directives/hover.directive';
 import { EmailValidatorDirective } from './course-contents/template-driven-forms/directives/email-validator.directive';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +29,7 @@ import { EmailValidatorDirective } from './course-contents/template-driven-forms
     TemplateDrivenFormsComponent,
     LoginComponent,
     HoverDirective,
-    EmailValidatorDirective
+    EmailValidatorDirective,
   ],
   imports: [
     BrowserModule,

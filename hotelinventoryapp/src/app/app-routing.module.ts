@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'routing-basics/rooms/:id', component: RoomsComponent },
   { path: 'template-driven-forms', component: TemplateDrivenFormsComponent},
   { path: 'template-driven-forms/login', component: LoginComponent},
+  { path: 'advanced-routing', loadChildren: () => import('./course-contents/advanced-routing/main-routing.module').then(m => m.MainRoutingModule)},
   { path: '**', component: NotFoundComponent}
 ];
 
