@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { MainService } from './services/main.service';
 
 @Component({
   selector: 'app-advanced-routing',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class AdvancedRoutingComponent {
 
-  constructor(private route: Router) { }
+  constructor(private route: Router, private mainService: MainService) { }
 
   goToRouteService() {
     alert('You are going to Route Service');
