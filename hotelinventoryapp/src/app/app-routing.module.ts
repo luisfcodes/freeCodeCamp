@@ -5,12 +5,14 @@ import { NotFoundComponent } from './course-contents/routing-basics/not-found/no
 import { RoomsComponent } from './course-contents/routing-basics/rooms/rooms.component';
 import { TemplateDrivenFormsComponent } from './course-contents/template-driven-forms/template-driven-forms.component';
 import { LoginComponent } from './course-contents/template-driven-forms/login/login.component';
+import { RouteGuardsComponent } from './course-contents/route-guards/route-guards.component';
 
 const routes: Routes = [
   { path: 'routing-basics', component: RoutingBasicsComponent },
   { path: 'routing-basics/rooms/:id', component: RoomsComponent },
   { path: 'template-driven-forms', component: TemplateDrivenFormsComponent},
   { path: 'template-driven-forms/login', component: LoginComponent},
+  { path: 'route-guards', component: RouteGuardsComponent },
   { path: 'advanced-routing', loadChildren: () => import('./course-contents/advanced-routing/main-routing.module').then(m => m.MainRoutingModule)},
   { path: '**', component: NotFoundComponent}
 ];
