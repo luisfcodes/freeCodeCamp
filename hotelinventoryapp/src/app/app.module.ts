@@ -16,7 +16,6 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './course-contents/template-driven-forms/login/login.component';
 import { HoverDirective } from './course-contents/template-driven-forms/directives/hover.directive';
 import { EmailValidatorDirective } from './course-contents/template-driven-forms/directives/email-validator.directive';
-import { RouteGuardsComponent } from './course-contents/route-guards/route-guards.component';
 
 @NgModule({
   declarations: [
@@ -30,8 +29,7 @@ import { RouteGuardsComponent } from './course-contents/route-guards/route-guard
     TemplateDrivenFormsComponent,
     LoginComponent,
     HoverDirective,
-    EmailValidatorDirective,
-    RouteGuardsComponent
+    EmailValidatorDirective
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,12 @@
+<form>
+  <div class="form-group">
+    <input type="email" #emailControl="ngModel" appEmailValidator class="form-control" name="name" [(ngModel)]="email" placeholder="Provide your username">
+    <p *ngIf="emailControl.getError('invalidEmail')">E-mail Inválido</p>
+  </div>
+  <div class="form-group">
+    <input type="password" class="form-control" name="name" [(ngModel)]="password" placeholder="Enter your password">
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary" (click)="login()">Entrar</button>
+  </div>
+</form>
