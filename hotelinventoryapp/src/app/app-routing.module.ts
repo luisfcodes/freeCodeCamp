@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: 'template-driven-forms/login', component: LoginComponent},
   { path: 'advanced-routing', loadChildren: () => import('./course-contents/advanced-routing/main-routing.module').then(m => m.MainRoutingModule), canLoad: [LoginGuard]},
   { path: 'route-guards', loadChildren: () => import('./course-contents/route-guards/route-guards.module').then(m => m.RouteGuardsModule) },
+  { path: 'reactive-forms', loadChildren: () => import('./course-contents/reactive-forms/reactive-forms.module').then(m => m.ReactiveFormsModule) },
   { path: '**', component: NotFoundComponent}
 ];
 

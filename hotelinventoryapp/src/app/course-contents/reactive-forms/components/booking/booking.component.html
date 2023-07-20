@@ -1,0 +1,45 @@
+<p>{{ bookingForm.value| json }}</p>
+
+<form [formGroup]="bookingForm">
+
+  <div class="mb-3">
+    <label for="roomId" class="form-label">Room Id</label>
+    <input type="text" class="form-control" id="roomId" formControlName="roomId">
+  </div>
+
+  <div class="mb-3">
+    <label for="guestEmail" class="form-label">Email</label>
+    <input type="email" class="form-control" id="guestEmail" formControlName="guestEmail">
+  </div>
+
+  <div class="mb-3">
+    <label for="guestName" class="form-label">Name</label>
+    <input type="text" class="form-control" id="guestName" formControlName="guestName">
+  </div>
+
+  <div class="mb-3">
+    <label for="mobileNumber" class="form-label">Mobile Number</label>
+    <input type="text" class="form-control" id="mobileNumber" formControlName="mobileNumber">
+  </div>
+
+  <div class="mb-3">
+    <label for="bookingAmount" class="form-label">Booking Amount</label>
+    <input type="number" class="form-control" id="bookingAmount" formControlName="bookingAmount">
+  </div>
+
+  <div class="mb-3">
+    <label for="checkinDate" class="form-label">Checking Date</label>
+    <input type="date" class="form-control" id="checkinDate" formControlName="checkinDate">
+  </div>
+
+  <div class="mb-3">
+    <label for="checkoutDate" class="form-label">Checkout Date</label>
+    <input type="date" class="form-control" id="checkoutDate" formControlName="checkoutDate">
+  </div>
+
+  <div class="mb-3">
+    <label for="bookingDate" class="form-label">Booking Date</label>
+    <input type="date" class="form-control" id="bookingDate" formControlName="bookingDate">
+  </div>
+
+</form>
