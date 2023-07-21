@@ -15,7 +15,7 @@ export class BookingComponent implements OnInit {
 
   ngOnInit(): void {
     this.bookingForm = this.fb.group({
-      roomId: [''],
+      roomId: [{ value: (Math.random() * 100).toFixed(0), disabled: true }],
       guestEmail: [''],
       checkinDate: [''],
       checkoutDate: [''],
@@ -24,13 +24,19 @@ export class BookingComponent implements OnInit {
       bookingDate: [''],
       mobileNumber: [''],
       guestName: [''],
-      guestAdress: [''],
-      guestCity: [''],
-      guestState: [''],
-      guestCountry: [''],
-      guestZipCode: [''],
+      address: this.fb.group({
+        addressLine1: [''],
+        addressLine2: [''],
+        city: [''],
+        state: [''],
+        country: [''],
+        zipCode: [''],
+      }),
       guestCount: [''],
-      //guestList: Guest[];
     })
+  }
+
+  addBooking() {
+    console.log(this.bookingForm.value);
   }
 }
