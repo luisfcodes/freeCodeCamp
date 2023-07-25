@@ -32,7 +32,7 @@ import { GlobalErroHandler } from './errorhandler.service';
     LoginComponent,
     HoverDirective,
     EmailValidatorDirective,
-    PricePipe
+    PricePipe,
   ],
   imports: [
     BrowserModule,
