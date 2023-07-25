@@ -15,6 +15,7 @@
   <div class="mb-3">
     <label for="guestName" class="form-label">Name</label>
     <input type="text" class="form-control" id="guestName" formControlName="guestName">
+    <p *ngIf="bookingForm.get('guestName')?.hasError('invalidName')">The name cannot be 'test' or 'teste'</p>
   </div>
 
   <div class="mb-3">
@@ -50,7 +51,7 @@
           Address
         </button>
       </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div id="collapseOne" class="accordion-collapse collapse hidden" data-bs-parent="#accordionExample">
         <div class="accordion-body">
           <div class="mb-3">
             <label for="addressLine1" class="form-label">Address 1</label>
@@ -76,6 +77,36 @@
             <label for="zipCode" class="form-label">Zip Code</label>
             <input type="text" class="form-control" id="zipCode" formControlName="zipCode">
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+          aria-expanded="true" aria-controls="collapseTwo">
+          Guests
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse hidden" data-bs-parent="#accordionTwo">
+        <div class="accordion-body">
+          <div formArrayName="guests">
+            <div *ngFor="let guest of guests.controls; let i = index">
+              <div [formGroupName]="i">
+                <div class="mb-3">
+                  <label for="guestName" class="form-label">Guest Name</label>
+                  <input type="text" class="form-control" id="guestName" formControlName="guestName">
+                </div>
+                <div class="mb-3">
+                  <label for="age" class="form-label">Age</label>
+                  <input type="number" class="form-control" id="age" formControlName="age">
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn btn-primary mt-3" (click)="addGuest()">Add Guest</button>
         </div>
       </div>
     </div>

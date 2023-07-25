@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './reactive-forms.component.html',
   styleUrls: ['./reactive-forms.component.scss']
 })
-export class ReactiveFormsComponent {
+export class ReactiveFormsComponent{
 
 }
