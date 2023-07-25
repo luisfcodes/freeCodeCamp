@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +16,8 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './course-contents/template-driven-forms/login/login.component';
 import { HoverDirective } from './course-contents/template-driven-forms/directives/hover.directive';
 import { EmailValidatorDirective } from './course-contents/template-driven-forms/directives/email-validator.directive';
+import { PricePipe } from './course-contents/routing-basics/pipes/price.pipe';
+import { GlobalErroHandler } from './errorhandler.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { EmailValidatorDirective } from './course-contents/template-driven-forms
     TemplateDrivenFormsComponent,
     LoginComponent,
     HoverDirective,
-    EmailValidatorDirective
+    EmailValidatorDirective,
+    PricePipe
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,10 @@ import { EmailValidatorDirective } from './course-contents/template-driven-forms
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [{
+    provide: ErrorHandler,
+    useClass: GlobalErroHandler
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

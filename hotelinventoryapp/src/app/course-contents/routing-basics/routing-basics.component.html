@@ -1,7 +1,7 @@
 <div *ngFor="let room of roomList | async">
   <h2>{{ room.roomType }}</h2>
   <p><strong>Adicionais:</strong> {{ room.amenities }}</p>
-  <p><strong>Preço:</strong> {{ room.price }}</p>
+  <p><strong>Preço:</strong> {{ room.price | price: 'pt-BR' : 'BRL' }}</p>
   <img [src]="room.photos" alt="" style="width: 200px;">
   <p><strong>Estrelas:</strong> {{ room.rating }}</p>
   <button class="btn btn-primary" [routerLink]="['/routing-basics/rooms', room.roomNumber]">Select</button>
